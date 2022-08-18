@@ -16,8 +16,10 @@ allPossibleChoices.forEach(allPossibleChoices => allPossibleChoices.addEventList
 	generateComputerChoice();
 }))
 
-// because this is a "function declaration" and not a "function expression" (look more about this),
-// we can actually declare it AFTER we call for it (JS is gonna hoist it?)
+/* because this is a "function declaration" and not a "function expression" (look more about this),
+ * we can actually declare it AFTER we call for it - JS is gonna hoist it (move to the top of the scope)
+ * ref: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+*/
 function generateComputerChoice() {
 	const randomNumber = Math.floor(Math.random() * (allPossibleChoices.length + 1)); //it will be multiplied by 3, but not hard coded
 	
