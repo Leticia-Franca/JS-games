@@ -9,7 +9,6 @@ main {
 	/*  */
 }
 
-
 .choices-display { 
 	display: flex;
 	flex-direction: row;
@@ -25,10 +24,30 @@ main {
 }
 
 .game-info {
-	background-color: rgba(208, 230, 230, 0.5);
+	background-image: linear-gradient(to right,  rgb(131, 102, 197),  rgb(197, 50, 107));
 	border-radius: 15px;
 	width: 100%;
 	padding: 2rem;
+}
+
+.choice-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1 { 
+	width: 100%; 
+	border-top: 3.5px solid rgb(107, 76, 180);
+	padding-top: 0.5rem;
+}
+
+.choice, #result {
+	color:rgb(115, 197, 177);
+	text-transform: uppercase;
+	/* margin-left: 20%; */
+	font-size: 1.8rem;
 }
 
 .moves-btns {
