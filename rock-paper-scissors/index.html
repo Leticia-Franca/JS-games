@@ -12,14 +12,23 @@
 		<section aria-labelledby="game-title" class="choices-display">
 			<h1 id="game-title">Rock, Paper and Scissors</h1>
 			<div class="game-info">
-				<h2>Computer Choice:<span class="choice" id="computer-choice"></span></h2>
-				<h2>Your Choice:<span class="choice "id="your-choice"></span></h2>
-				<h2>Result:<span class="result-display" id="result"></span></h2>
+				<div class="choice-wrapper">
+					<h2>Computer Choice</h2>
+					<p class="choice" id="computer-choice"></p>
+				</div>
+				<div class="choice-wrapper">
+					<h2>Your Choice</h2>
+					<p class="choice "id="your-choice"></p>
+				</div>
+				<div class="choice-wrapper">
+					<h2>Result</h2>
+					<p id="result"></p>
+				</div>
 			</div>
 		</section>
 
 		<section aria-labelledby="player-moves" class="moves">
-			<h2 id="player-moves">Choose your move:</h2>
+			<h2 id="player-moves">Choose your move</h2>
 			<div class="moves-btns">
 				<button id="rock">rock</button>
 				<button id="paper">paper</button>
