@@ -2,17 +2,43 @@
  * because the grid MUST FIT THE BORDER AS WELL --> so, we include the border width
  * adding 6px
  */
-.grid {
-	width: 606px;
-	height: 606px;
-	display: flex;
-	flex-wrap: wrap;
+ * { box-sizing: border-box; }
+
+body {
+	width: 100%; 
+	margin: 0;
+	background-color: black;
 }
 
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 95vh;
+	width: 100vw;
+}
+
+.score-titles {
+	width: 90%;
+	display: flex;
+	justify-content: space-around;
+	color: rgb(68, 34, 122);
+}
+
+.grid {
+	background-color: rgb(68, 34, 122);
+	display: grid;
+	grid-template-columns: repeat(3, 160px);
+	grid-template-rows: repeat(3, 160px);
+}
+
+
+
 .square {
-	height: 200px;
-	width: 200px;
-	border: solid black 1px;
+	height: 160px;
+	width: 160px;
+	border: solid rgb(0, 0, 0) 2px;
 }
 
 .mole {
