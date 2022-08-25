@@ -8,10 +8,16 @@
 	<title>Whac-a-mole</title>
 </head>
 <body>
+	<div id="pop-up-wrapper">
+		<section aria-labelledby="game-over-warning" class="game-over-container">
+			<h2 id="game-over-warning">Game Over!</h2>
+			<p id="number-score">Your score: </p>
+		</section>
+	</div>
 	<main>
 		<section aria-labelledby="score-data" class="score-titles">
 			<h2 id="score-data">Your Score:<span id="score">0</span></h2>
-			<h2 id="time-left">60</h2>
+			<h2 id="time-left">30</h2>
 		</section>
 
 		<section aria-labelledby="game-grid" class="grid">
@@ -26,7 +32,6 @@
 			<div class="square" id="9"></div>
 		</section>
 	</main>
-
 	<script src="./script.js"></script>
 </body>
 </html>

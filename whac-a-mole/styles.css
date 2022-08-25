@@ -2,7 +2,7 @@
  * because the grid MUST FIT THE BORDER AS WELL --> so, we include the border width
  * adding 6px
  */
- * { box-sizing: border-box; }
+ *, *::after, *::before { box-sizing: border-box; }
 
 body {
 	width: 100%; 
@@ -10,12 +10,54 @@ body {
 	background-color: black;
 }
 
+#pop-up-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 200;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-over-container {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 90%;
+	height: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#game-over-warning {
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 4.5rem;
+	margin: 0;
+	width: 100%;
+	letter-spacing: 1px;
+	text-align: center;
+	color: rgb(209, 43, 57);
+}
+
+#number-score {
+	color: white;
+	text-align: center;
+	margin: 0;
+	font-size: 1.25rem;
+}
+
 main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	height: 95vh;
+	height: 100vh;
 	width: 100vw;
 }
 
@@ -26,6 +68,17 @@ main {
 	color: rgb(68, 34, 122);
 }
 
+#score {
+	margin-left: 15px;
+	color: rgb(34, 233, 233);
+}
+
+#score-data { color:rgb(144, 36, 187); }
+
+#time-left {
+	color: rgb(144, 36, 187);
+}
+
 .grid {
 	background-color: rgb(68, 34, 122);
 	display: grid;
@@ -33,14 +86,12 @@ main {
 	grid-template-rows: repeat(3, 160px);
 }
 
-
-
 .square {
 	height: 160px;
 	width: 160px;
-	border: solid rgb(0, 0, 0) 2px;
+	border: solid rgb(0, 0, 0) 5px;
 }
 
 .mole {
-	background-color: aqua;
+	background-color:  rgb(34, 233, 233);
 }

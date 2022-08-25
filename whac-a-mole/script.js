@@ -6,10 +6,12 @@ const squares = document.querySelectorAll('.square');
 const mole = document.querySelector('.mole');
 const timeLeft = document.getElementById('time-left');
 const scoreDisplay = document.getElementById('score');
+const popUp = document.getElementById('pop-up-wrapper');
+const yourScore = document.getElementById('number-score');
 
 let result = 0;
 let hitPosition = null;
-let currentTime = 60;
+let currentTime = 30;
 let timerId = null;
 
 // function the get a random square to put our mole
@@ -58,7 +60,11 @@ function countDown() {
 		// this function clearInterval() does what?
 		clearInterval(countDownTimerId);
 		clearInterval(timerId);
-		alert('GAME OVER! Your final score is ' + result);
+		// alert('GAME OVER! Your final score is ' + result);
+		popUp.style.display = 'flex';
+		yourScore.innerHTML += result.toString(10);
+
+		
 	}
 }
 
